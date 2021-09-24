@@ -9,6 +9,7 @@ import { SmartHtmlTableComponent } from './smart-html-table/smart-html-table.com
 import { DatatableComponent } from './datatable/datatable.component';
 
 import { ModalEditComponent } from './modal-edit/modal-edit.component';
+import { DatatableAngularComponent } from './datatable-angular/datatable-angular.component';
 
 
 
@@ -33,6 +34,10 @@ const routes: Routes = [{
       path: 'datatable',
       component: DatatableComponent,
     },    
+    {
+      path: 'datatable-angular',
+      component: DatatableAngularComponent,
+    },        
     {
       path: 'modal',
       component: ModalEditComponent,

@@ -21,6 +21,7 @@ import { ModalEditComponent } from './modal-edit/modal-edit.component';
 /*https://ng-bootstrap.github.io/#/getting-started */
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DatatableAngularComponent } from './datatable-angular/datatable-angular.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SmartHtmlTableComponent,
     DatatableComponent,
     ModalEditComponent,
+    DatatableAngularComponent,
   ],
 })
 export class TablesModule { }
