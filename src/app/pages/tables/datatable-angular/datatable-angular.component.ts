@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
-import { Person } from '../person';
+import { Person } from '../../../models/person';
 
 import 'rxjs/add/operator/map';
 

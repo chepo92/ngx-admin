@@ -46,11 +46,12 @@ export const routes: Routes = [
     ],
   },
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  // { path: '**', redirectTo: 'pages' },
 ];
 
 const config: ExtraOptions = {
   useHash: false,
+  relativeLinkResolution: 'legacy',
 };
 
 @NgModule({
