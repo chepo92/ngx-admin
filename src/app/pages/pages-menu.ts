@@ -210,6 +210,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Tree Grid',
         link: '/pages/tables/tree-grid',
       },
+      {
+        title: 'Smart HTML Table',
+        link: '/pages/tables/smart-html-table',
+      },  
+      {
+        title: 'Datatable',
+        link: '/pages/tables/datatable',
+      },    
+      {
+        title: 'Modal Edit',
+        link: '/pages/tables/modal',
+      },        
     ],
   },
   {

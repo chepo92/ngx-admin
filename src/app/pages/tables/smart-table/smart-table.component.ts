@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-
 import { SmartTableData } from '../../../@core/data/smart-table';
 
 @Component({
@@ -8,6 +7,8 @@ import { SmartTableData } from '../../../@core/data/smart-table';
   templateUrl: './smart-table.component.html',
   styleUrls: ['./smart-table.component.scss'],
 })
+
+
 export class SmartTableComponent {
 
   settings = {
