@@ -213,19 +213,19 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Smart HTML Table',
         link: '/pages/tables/smart-html-table',
-      },  
+      },
       {
         title: 'Datatable',
         link: '/pages/tables/datatable',
-      },    
+      },
       {
         title: 'Datatable Angular',
         link: '/pages/tables/datatable-angular',
-      },        
+      },
       {
         title: 'Modal Edit',
         link: '/pages/tables/modal',
-      },        
+      },
     ],
   },
   {
