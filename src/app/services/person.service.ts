@@ -1,4 +1,4 @@
-import { SearchMapComponent } from '../pages/maps/search-map/search-map.component';
+// import { SearchMapComponent } from '../pages/maps/search-map/search-map.component';
 import { Injectable } from '@angular/core';
 
 import { Person } from '../models/person';
@@ -6,7 +6,7 @@ import { Person } from '../models/person';
 import data from '../../data/data1.json';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PersonService {
   constructor() { }
