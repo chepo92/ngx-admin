@@ -219,6 +219,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/datatable',
       },    
       {
+        title: 'Datatable Angular',
+        link: '/pages/tables/datatable-angular',
+      },        
+      {
         title: 'Modal Edit',
         link: '/pages/tables/modal',
       },        
