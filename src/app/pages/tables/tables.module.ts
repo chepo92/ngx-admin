@@ -50,11 +50,11 @@ import { DataService } from './../../services/data.service';
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 
-import { DeleteEntryComponent } from './crud-mat-table/dialogs/delete-entry/delete-entry.component';
+// import { DeleteEntryComponent } from './crud-mat-table/dialogs/delete-entry/delete-entry.component';
 import { EditDialogComponent } from './crud-mat-table/dialogs/edit-dialog/edit-dialog.component';
 import { AddDialogComponent } from './crud-mat-table/dialogs/add-dialog/add-dialog.component';
 import { DeleteDialogComponent } from './crud-mat-table/dialogs/delete-dialog/delete-dialog.component';
-import { AddEntryComponent } from './crud-mat-table/add-entry/add-entry.component';
+// import { AddEntryComponent } from './crud-mat-table/add-entry/add-entry.component';
 
 
 @NgModule({
@@ -70,8 +70,6 @@ import { AddEntryComponent } from './crud-mat-table/add-entry/add-entry.componen
     DataTablesModule,
     NgbModule,
     ReactiveFormsModule,
-    // BrowserModule,
-    // BrowserAnimationsModule,
     HttpClientModule,
     MatDialogModule,
     FormsModule,
@@ -93,14 +91,10 @@ import { AddEntryComponent } from './crud-mat-table/add-entry/add-entry.componen
     ModalEditComponent,
     DatatableAngularComponent,
     CrudMatTableComponent,
-    DeleteEntryComponent,
+    // DeleteEntryComponent,
     EditDialogComponent,
     AddDialogComponent,
     DeleteDialogComponent,
-    AddEntryComponent
-    // AddDialogComponent,
-    // EditDialogComponent,
-    // DeleteDialogComponent
   ],
   // entryComponents: [
   //   AddDialogComponent,
