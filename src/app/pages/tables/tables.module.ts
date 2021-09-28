@@ -1,5 +1,6 @@
 
 
+
 import { NgModule } from '@angular/core';
 import { NbCardModule, NbIconModule, NbInputModule, NbTreeGridModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
@@ -28,7 +29,7 @@ import { CrudMatTableComponent } from './crud-mat-table/crud-mat-table.component
 
 
 /* Material CRUD */
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule} from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
@@ -42,12 +43,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 // import {DataService} from './services/data.service';
 import { DataService } from './../../services/data.service';
 
-import { DeleteDialogComponent } from './crud-mat-table/dialogs/delete/delete.dialog.component';
-import { EditDialogComponent } from './crud-mat-table/dialogs/edit/edit.dialog.component';
-import { AddDialogComponent } from './crud-mat-table/dialogs/add/add.dialog.component';
+// import { DeleteDialogComponent } from './crud-mat-table/dialogs/delete/delete.dialog.component';
+// import { EditDialogComponent } from './crud-mat-table/dialogs/edit/edit.dialog.component';
+// import { AddDialogComponent } from './crud-mat-table/dialogs/add/add.dialog.component';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
+
+import { DeleteEntryComponent } from './crud-mat-table/dialogs/delete-entry/delete-entry.component';
+import { EditDialogComponent } from './crud-mat-table/dialogs/edit-dialog/edit-dialog.component';
+import { AddDialogComponent } from './crud-mat-table/dialogs/add-dialog/add-dialog.component';
+import { DeleteDialogComponent } from './crud-mat-table/dialogs/delete-dialog/delete-dialog.component';
+import { AddEntryComponent } from './crud-mat-table/add-entry/add-entry.component';
 
 
 @NgModule({
@@ -63,8 +70,8 @@ import {FormsModule} from '@angular/forms';
     DataTablesModule,
     NgbModule,
     ReactiveFormsModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+    // BrowserModule,
+    // BrowserAnimationsModule,
     HttpClientModule,
     MatDialogModule,
     FormsModule,
@@ -75,7 +82,8 @@ import {FormsModule} from '@angular/forms';
     MatTableModule,
     MatToolbarModule,
     MatPaginatorModule,
-    ReactiveFormsModule    
+    ReactiveFormsModule,
+    
   ],
   declarations: [
     ...routedComponents,
@@ -85,15 +93,20 @@ import {FormsModule} from '@angular/forms';
     ModalEditComponent,
     DatatableAngularComponent,
     CrudMatTableComponent,
+    DeleteEntryComponent,
+    EditDialogComponent,
+    AddDialogComponent,
+    DeleteDialogComponent,
+    AddEntryComponent
     // AddDialogComponent,
     // EditDialogComponent,
     // DeleteDialogComponent
   ],
-  entryComponents: [
-    AddDialogComponent,
-    EditDialogComponent,
-    DeleteDialogComponent
-  ],
+  // entryComponents: [
+  //   AddDialogComponent,
+  //   EditDialogComponent,
+  //   DeleteDialogComponent
+  // ],
   providers: [
     DataService
   ],

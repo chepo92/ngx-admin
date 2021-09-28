@@ -1,3 +1,4 @@
+
 import { DataService } from './../../../services/data.service';
 import { Issue } from './../../../models/issue';
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
@@ -8,18 +9,32 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 // import {Issue} from './models/issue';
 import {DataSource} from '@angular/cdk/collections';
-import {AddDialogComponent} from './dialogs/add/add.dialog.component';
-import {EditDialogComponent} from './dialogs/edit/edit.dialog.component';
-import {DeleteDialogComponent} from './dialogs/delete/delete.dialog.component';
+// import {AddDialogComponent} from './dialogs/add/add.dialog.component';
+// import {EditDialogComponent} from './dialogs/edit/edit.dialog.component';
+// import {DeleteDialogComponent} from './dialogs/delete/delete.dialog.component';
 import {BehaviorSubject, fromEvent, merge, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+// Auto
+import { DeleteDialogComponent } from './dialogs/delete-dialog/delete-dialog.component';
+import { AddDialogComponent } from './dialogs/add-dialog/add-dialog.component';
+import { EditDialogComponent } from './dialogs/edit-dialog/edit-dialog.component';
 
 @Component({
   selector: 'ngx-crud-mat-table',
   templateUrl: './crud-mat-table.component.html',
-  styleUrls: ['./crud-mat-table.component.scss']
+  styleUrls: ['./crud-mat-table.component.scss'], 
+  // entryComponents : [AddDialogComponent, EditDialogComponent , DeleteDialogComponent , MatDialogModule]
 })
-
 
 
 export class CrudMatTableComponent implements OnInit {

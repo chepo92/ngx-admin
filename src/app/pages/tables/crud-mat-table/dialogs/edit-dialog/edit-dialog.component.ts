@@ -1,21 +1,19 @@
-import { Issue } from './../../../../../models/issue';
 import { DataService } from './../../../../../services/data.service';
+import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import {Component, Inject} from '@angular/core';
+
 // import {DataService} from '../../services/data.service';
 import {FormControl, Validators} from '@angular/forms';
-// import {Issueue} from '../../models/issue';
 
 @Component({
-  selector: 'app-add.dialog',
-  templateUrl: '../../dialogs/add/add.dialog.html',
-  styleUrls: ['../../dialogs/add/add.dialog.css']
+  selector: 'ngx-edit-dialog',
+  templateUrl: './edit-dialog.component.html',
+  styleUrls: ['./edit-dialog.component.scss']
 })
+export class EditDialogComponent {
 
-export class AddDialogComponent {
-  constructor(public dialogRef: MatDialogRef<AddDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: Issue,
-              public dataService: DataService) { }
+  constructor(public dialogRef: MatDialogRef<EditDialogComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any, public dataService: DataService) { }
 
   formControl = new FormControl('', [
     Validators.required
@@ -29,14 +27,14 @@ export class AddDialogComponent {
   }
 
   submit() {
-  // emppty stuff
+    // emppty stuff
   }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
 
-  public confirmAdd(): void {
-    this.dataService.addIssue(this.data);
+  stopEdit(): void {
+    this.dataService.updateIssue(this.data);
   }
 }
