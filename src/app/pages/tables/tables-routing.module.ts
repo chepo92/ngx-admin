@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -11,7 +10,7 @@ import { DatatableComponent } from './datatable/datatable.component';
 import { ModalEditComponent } from './modal-edit/modal-edit.component';
 import { DatatableAngularComponent } from './datatable-angular/datatable-angular.component';
 
-
+import { CrudMatTableComponent } from './crud-mat-table/crud-mat-table.component';
 
 
 const routes: Routes = [{
@@ -41,7 +40,11 @@ const routes: Routes = [{
     {
       path: 'modal',
       component: ModalEditComponent,
-    },       
+    },     
+    {
+      path: 'crud-material',
+      component: CrudMatTableComponent,
+    },         
   ],
 }];
 
