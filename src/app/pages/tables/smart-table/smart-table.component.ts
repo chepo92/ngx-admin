@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { SmartTableData } from '../../../@core/data/smart-table';
 
+import { HttpClient } from '@angular/common/http';
+import { ServerDataSource } from 'ng2-smart-table';
+
 @Component({
   selector: 'ngx-smart-table',
   templateUrl: './smart-table.component.html',
@@ -54,12 +57,21 @@ export class SmartTableComponent {
     },
   };
 
+   /* Local Server data source */
   source: LocalDataSource = new LocalDataSource();
 
   constructor(private service: SmartTableData) {
     const data = this.service.getData();
     this.source.load(data);
   }
+
+
+  /* Server data source */
+  // source: ServerDataSource;
+
+  // constructor(http: HttpClient) {
+  //   this.source = new ServerDataSource(http, { endPoint: 'http://localhost:3000/usuarios' });
+  // }  
 
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {

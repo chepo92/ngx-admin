@@ -226,6 +226,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Modal Edit',
         link: '/pages/tables/modal',
       },
+      {
+        title: 'Crud material',
+        link: '/pages/tables/crud-material',
+      },      
     ],
   },
   {
