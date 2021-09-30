@@ -25,7 +25,7 @@ export class DatatableAngularComponent implements OnInit {
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 2
+      pageLength: 25
     };
     this.httpClient.get<Person[]>('data/data.json')
       .subscribe(data => {

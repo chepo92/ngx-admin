@@ -24,6 +24,7 @@ import { ModalEditComponent } from './modal-edit/modal-edit.component';
 /*https://ng-bootstrap.github.io/#/getting-started */
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { DatatableAngularComponent } from './datatable-angular/datatable-angular.component';
 import { CrudMatTableComponent } from './crud-mat-table/crud-mat-table.component';
 
