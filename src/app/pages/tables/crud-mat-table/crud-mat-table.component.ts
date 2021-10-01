@@ -36,6 +36,9 @@ export class CrudMatTableComponent implements OnInit {
   index: number;
   id: number;
 
+  message : any ; 
+
+
   constructor(public httpClient: HttpClient,
               public dialog: MatDialog,
               public dataService: DataService) {}
@@ -46,6 +49,19 @@ export class CrudMatTableComponent implements OnInit {
 
   ngOnInit() {
     this.loadData();
+    // Subscribe to messages from dataService
+    this.dataService.currentMessage.subscribe(data => {
+      this.message = data;     
+      console.log("Suscrito");
+      
+
+      // push the new data and refresh 
+      if(data != null) {
+        console.log(data);
+        this.exampleDatabase.dataChange.value.push(this.message);
+        this.refreshTable();
+     }       
+    }); 
   }
 
   refresh() {
@@ -185,6 +201,7 @@ export class ExampleDataSource extends DataSource<Issue> {
     return merge(...displayDataChanges).pipe(map( () => {
         // Filter data
         this.filteredData = this._exampleDatabase.data.slice().filter((issue: Issue) => {
+          console.log("merge: "  + issue.id);
           const searchStr = (issue.id + issue.title + issue.url + issue.created_at).toLowerCase();
           return searchStr.indexOf(this.filter.toLowerCase()) !== -1;
         });

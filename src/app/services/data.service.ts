@@ -8,8 +8,15 @@ export class DataService {
   private readonly API_URL = 'https://api.github.com/repos/angular/angular/issues';
 
   dataChange: BehaviorSubject<Issue[]> = new BehaviorSubject<Issue[]>([]);
+  
+  // Message 
+  private messageSource = new BehaviorSubject({} as any);
+  currentMessage = this.messageSource.asObservable();
+  
   // Temporarily stores data from dialogs
   dialogData: any;
+
+
 
   constructor (private httpClient: HttpClient) {}
 
@@ -34,6 +41,13 @@ export class DataService {
   // DEMO ONLY, you can find working methods below
   addIssue (issue: Issue): void {
     this.dialogData = issue;
+    /* Do some http POST 
+    the response of the POST can be passed as a message to suscribers
+    this.messageSource.next(responseFromPOST);
+
+    */
+    this.messageSource.next("responseFromPOST");
+
   }
 
   updateIssue (issue: Issue): void {
