@@ -41,6 +41,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         pathMatch: 'prefix',
         link: '/pages/layout/tabs',
       },
+      {
+        title: 'Push-Pull',
+        link: '/pages/layout/push-pull',
+      },      
     ],
   },
   {

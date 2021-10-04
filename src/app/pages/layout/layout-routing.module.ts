@@ -8,6 +8,8 @@ import { InfiniteListComponent } from './infinite-list/infinite-list.component';
 import { ListComponent } from './list/list.component';
 import { StepperComponent } from './stepper/stepper.component';
 
+import { PushPullListComponent } from './push-pull-list/push-pull-list.component';
+
 const routes: Routes = [{
   path: '',
   component: LayoutComponent,
@@ -19,6 +21,10 @@ const routes: Routes = [{
     {
       path: 'list',
       component: ListComponent,
+    },
+    {
+      path: 'push-pull',
+      component: PushPullListComponent,
     },
     {
       path: 'infinite-list',

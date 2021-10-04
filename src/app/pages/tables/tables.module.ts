@@ -55,6 +55,8 @@ import {FormsModule} from '@angular/forms';
 import { EditDialogComponent } from './crud-mat-table/dialogs/edit-dialog/edit-dialog.component';
 import { AddDialogComponent } from './crud-mat-table/dialogs/add-dialog/add-dialog.component';
 import { DeleteDialogComponent } from './crud-mat-table/dialogs/delete-dialog/delete-dialog.component';
+import { PushPullComponent } from './push-pull/push-pull.component';
+import { PushPullTableComponent } from './push-pull-table/push-pull-table.component';
 // import { AddEntryComponent } from './crud-mat-table/add-entry/add-entry.component';
 
 
@@ -96,6 +98,8 @@ import { DeleteDialogComponent } from './crud-mat-table/dialogs/delete-dialog/de
     EditDialogComponent,
     AddDialogComponent,
     DeleteDialogComponent,
+    PushPullComponent,
+    PushPullTableComponent,
   ],
   // entryComponents: [
   //   AddDialogComponent,

@@ -4,6 +4,7 @@ import {
   NbAccordionModule,
   NbButtonModule,
   NbCardModule,
+  NbIconModule,
   NbListModule,
   NbRouteTabsetModule,
   NbStepperModule,
@@ -21,6 +22,9 @@ import { NewsPostComponent } from './infinite-list/news-post/news-post.component
 import { NewsPostPlaceholderComponent } from './infinite-list/news-post-placeholder/news-post-placeholder.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { NewsService } from './news.service';
+import { PushPullListComponent } from './push-pull-list/push-pull-list.component';
+
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({
   imports: [
@@ -36,6 +40,9 @@ import { NewsService } from './news.service';
     NbAccordionModule,
     NbUserModule,
     LayoutRoutingModule,
+    NbEvaIconsModule,
+    NbIconModule
+    
   ],
   declarations: [
     LayoutComponent,
@@ -48,6 +55,7 @@ import { NewsService } from './news.service';
     InfiniteListComponent,
     NewsPostComponent,
     AccordionComponent,
+    PushPullListComponent,
   ],
   providers: [
     NewsService,
