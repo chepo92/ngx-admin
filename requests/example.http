@@ -17,3 +17,86 @@ POST https://jsonplaceholder.typicode.com/posts HTTP/1.1
 }
 
 
+
+GET https://jsonplaceholder.typicode.com/posts HTTP/1.1
+
+###
+
+
+GET https://jsonplaceholder.typicode.com/posts/1 HTTP/1.1
+
+###
+
+POST https://jsonplaceholder.typicode.com/posts HTTP/1.1
+{
+    "title": "foo",
+    "body": "bar",
+    "userId": "1",
+}
+
+###
+
+GET http://localhost:3000/post/1 HTTP/1.1
+
+###
+
+GET   http://localhost:3000/usuarios
+
+###
+
+GET   http://localhost:3000/usuarios/1
+
+###
+POST http://localhost:3000/usuarios HTTP/1.1
+content-type: application/json
+
+{
+    "nombre": "U2",
+    "apellido": "LN",
+    "email": "correo@de.ejemplo",
+    "id": 2,
+    "rol": "admin",
+    "idioma": "ES"
+}
+
+###
+POST http://localhost:3000/usuarios HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "nombre": "User1",
+  "apellido": "LN",
+  "email": "email@example.com"
+}
+
+###
+POST http://localhost:3000/usuarios HTTP/1.1
+content-type: application/json
+
+{
+  "nombre": "Name",
+  "apellido": "Last",
+  "email": "correo@de.ejemplo"
+}
+
+###
+PUT http://localhost:3000/usuarios/2 HTTP/1.1
+content-type: application/json
+
+{
+    "nombre": "U2",
+    "apellido": "LN",
+    "email": "correo@de.ejemplo",
+    "id": 2,
+    "rol": "admin",
+    "idioma": "ES"
+}
+
+###
+PATCH http://localhost:3000/usuarios/2 HTTP/1.1
+content-type: application/json
+
+{
+  "email": "myname@mail.ejemplo"
+}
