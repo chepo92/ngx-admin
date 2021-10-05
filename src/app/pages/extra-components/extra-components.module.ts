@@ -37,6 +37,7 @@ import { NebularFormInputsComponent } from './form-inputs/nebular-form-inputs.co
 import { NebularSelectComponent } from './form-inputs/nebular-select/nebular-select.component';
 import { CalendarKitFullCalendarShowcaseComponent } from './calendar-kit/calendar-kit.component';
 import { CalendarKitMonthCellComponent } from './calendar-kit/month-cell/month-cell.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 const COMPONENTS = [
   ExtraComponentsComponent,
@@ -55,6 +56,7 @@ const COMPONENTS = [
   NebularSelectComponent,
   CalendarKitFullCalendarShowcaseComponent,
   CalendarKitMonthCellComponent,
+  FileUploadComponent
 ];
 
 const MODULES = [
@@ -81,6 +83,7 @@ const MODULES = [
   ],
   declarations: [
     ...COMPONENTS,
+    
   ],
 })
 export class ExtraComponentsModule { }
