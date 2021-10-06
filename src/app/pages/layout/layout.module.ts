@@ -25,6 +25,10 @@ import { NewsService } from './news.service';
 import { PushPullListComponent } from './push-pull-list/push-pull-list.component';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { DualListComponent } from './dual-list/dual-list.component';
+
+import { AngularDualListBoxModule } from 'angular-dual-listbox';
+
 
 @NgModule({
   imports: [
@@ -41,7 +45,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbUserModule,
     LayoutRoutingModule,
     NbEvaIconsModule,
-    NbIconModule
+    NbIconModule,
+    AngularDualListBoxModule
     
   ],
   declarations: [
@@ -56,6 +61,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NewsPostComponent,
     AccordionComponent,
     PushPullListComponent,
+    DualListComponent,
   ],
   providers: [
     NewsService,
