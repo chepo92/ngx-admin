@@ -44,7 +44,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Push-Pull',
         link: '/pages/layout/push-pull',
-      },      
+      },     
+      {
+        title: 'Dual-list',
+        link: '/pages/layout/dual-list',
+      },        
     ],
   },
   {
