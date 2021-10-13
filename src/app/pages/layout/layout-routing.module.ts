@@ -1,3 +1,4 @@
+import { DualListComponent } from './dual-list/dual-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -26,6 +27,10 @@ const routes: Routes = [{
       path: 'push-pull',
       component: PushPullListComponent,
     },
+    {
+      path: 'dual-list',
+      component: DualListComponent,
+    },    
     {
       path: 'infinite-list',
       component: InfiniteListComponent,
