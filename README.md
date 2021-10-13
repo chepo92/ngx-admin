@@ -57,6 +57,17 @@ Try low-code internal tool builder for free
 - 40+ Angular Components
 - 60+ Usage Examples
 
+### Requirements
+ - Node (v14)
+ - NPM
+ - Angular `npm install -g @angular/cli`
+ - node-sass `npm install node-sass`
+ - node-gyp `npm install node-gyp`
+ - Additional features and components:
+   - Datatables
+   - 
+ - JsonServer (for development with simulated fake backend, but totally functional) 
+
 ### Demo
 
 <a target="_blank" href="http://www.akveo.com/ngx-admin/?utm_campaign=ngx_admin%20-%20demo%20-%20ngx_admin%20github%20readme&utm_source=ngx_admin&utm_medium=referral&utm_content=live_demo_link">Live Demo</a>
