@@ -1,0 +1,23 @@
+
+
+
+<nb-card class="list-card">
+    <nb-card-header> </nb-card-header>
+    <nb-card-body>
+ 
+        <input type="file" class="file-input"
+        (change)="onFileSelected($event)" #fileUpload>
+ 
+ <div class="file-upload">
+ 
+    {{fileName || "No file uploaded yet."}}
+ 
+     <button mat-mini-fab color="primary" class="upload-btn"
+       (click)="fileUpload.click()">
+         attach_file 
+     </button>
+ </div>        
+
+    </nb-card-body>
+
+  </nb-card>
