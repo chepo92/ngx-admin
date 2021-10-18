@@ -150,6 +150,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Chat',
         link: '/pages/extra-components/chat',
       },
+      {
+        title: 'File Upload',
+        link: '/pages/extra-components/file-upload', 
+      },
     ],
   },
   {

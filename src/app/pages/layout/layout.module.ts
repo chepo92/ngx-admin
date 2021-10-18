@@ -28,6 +28,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DualListComponent } from './dual-list/dual-list.component';
 
 import { AngularDualListBoxModule } from 'angular-dual-listbox';
+import { CustomDualListComponent } from './custom-dual-list/custom-dual-list.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { AngularDualListBoxModule } from 'angular-dual-listbox';
     AccordionComponent,
     PushPullListComponent,
     DualListComponent,
+    CustomDualListComponent,
   ],
   providers: [
     NewsService,
