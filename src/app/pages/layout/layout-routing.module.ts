@@ -10,6 +10,7 @@ import { ListComponent } from './list/list.component';
 import { StepperComponent } from './stepper/stepper.component';
 
 import { PushPullListComponent } from './push-pull-list/push-pull-list.component';
+import { CustomDualListComponent } from './custom-dual-list/custom-dual-list.component';
 
 const routes: Routes = [{
   path: '',
@@ -31,6 +32,10 @@ const routes: Routes = [{
       path: 'dual-list',
       component: DualListComponent,
     },    
+    {
+      path: 'custom-dual-list',
+      component: CustomDualListComponent,
+    },      
     {
       path: 'infinite-list',
       component: InfiniteListComponent,

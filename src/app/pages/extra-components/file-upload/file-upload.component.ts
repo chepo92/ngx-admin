@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FileUploadService } from '../../../services/file-upload/file-upload.service';
+
+// import { FileUploadService } from './file-upload.service';
+
 
 @Component({
   selector: 'ngx-file-upload',
@@ -7,23 +11,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FileUploadComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  convertFile = () => {
-    const input = <HTMLInputElement>document.getElementById('fileInput');
+    // Variable to store shortLink from api response
+    shortLink: string = "";
+    loading: boolean = false; // Flag variable
+    file: File = null; // Variable to store file
   
-    const reader = new FileReader();
-    reader.onload = () => {
-      var text: String = <String>reader.result;
-      console.log('CSV: ', text.substring(0, 100) + '...');
-      
-      //convert text to json here
-      //var json = this.csvJSON(text);
-    };
-    reader.readAsText(input.files[0]);
-  };
+    // Inject service 
+    constructor(private fileUploadService: FileUploadService) { }
+  
+    ngOnInit(): void {
+    }
+  
+    // On file Select
+    onChange(event) {
+        this.file = event.target.files[0];
+    }
+  
+    // OnClick of button Upload
+    onUpload() {
+        this.loading = !this.loading;
+        console.log(this.file);
+        this.fileUploadService.upload(this.file).subscribe(
+            (event: any) => {
+                if (typeof (event) === 'object') {
+  
+                    // Short link via api response
+                    this.shortLink = event.link;
+  
+                    this.loading = false; // Flag variable 
+                }
+            }
+        );
+    }
 
 }

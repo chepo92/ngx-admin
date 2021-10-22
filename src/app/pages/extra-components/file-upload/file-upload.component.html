@@ -1,10 +1,28 @@
 <nb-card>
     <nb-card-header>File Upload</nb-card-header>
     <nb-card-body>
-        <input type='file' onchange='convertFile(event)' id='fileInput'>
+
+        <div class="text-center">
+            <input class="form-control" type="file" 
+                    (change)="onChange($event)">
+          
+            <button (click)="onUpload()" 
+                class="btn btn-success">
+                Upload
+            </button>
+        </div>
+          
+        <!-- Shareable short link of  uploaded file -->
+        <div class="container text-center jumbotron"
+            *ngIf="shortLink">
+            <h2> Visit Here</h2>
+            <a href="{{shortLink}}">{{shortLink}}</a>
+        </div>
+          
+        <!--Flag variable is used here-->
+        <div class="container" *ngIf="loading">
+            <h3>Loading ...</h3>
+        </div>
+
     </nb-card-body>
-  </nb-card>
-
-
-
-  
+</nb-card>

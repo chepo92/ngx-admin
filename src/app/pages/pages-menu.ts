@@ -48,7 +48,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Dual-list',
         link: '/pages/layout/dual-list',
-      },        
+      },       
+      {
+        title: 'Custom Dual-list',
+        link: '/pages/layout/custom-dual-list',
+      },         
     ],
   },
   {
